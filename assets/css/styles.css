@@ -266,10 +266,18 @@ img {
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
 }
 
-.carrier_objective{
-  width: 700px;
+.career_objective {
+  max-width: 90%; /* Use percentage for better responsiveness */
+  width: 700px; /* Set a default width */
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .career_objective {
+    width: 100%; /* Make it full width on smaller screens */
+    max-width: 95%; /* Adjust for better spacing */
+  }
 }
 
 .section {
