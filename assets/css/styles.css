@@ -267,7 +267,6 @@ img {
 }
 
 .career_objective {
-  max-width: 90%; /* Use percentage for better responsiveness */
   width: 700px; /* Set a default width */
   word-wrap: break-word;
   overflow-wrap: break-word;
