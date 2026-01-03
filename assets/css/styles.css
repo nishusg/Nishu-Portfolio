@@ -245,7 +245,22 @@ img {
   right: 0;
   bottom: 0;
   width: 300px;
+  z-index: 1;
 }
+
+@media (max-width: 768px) {
+  .home_img {
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 500px;
+
+    opacity: 0.12;
+    z-index: -20;
+    pointer-events: none;
+  }
+}
+
+
 
 .home_img svg {
   width: 100%;
