@@ -29,15 +29,19 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 // EMAIL CONTENT OPTION
 
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-      const subjectInputValue = document.getElementById('subjectInput').value;
-      const nameInputValue = document.getElementsByName('Name')[0].value;
-      const messageInputValue = document.getElementsByName('Message')[0].value;
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+      contactForm.addEventListener('submit', function (event) {
+            const subjectInputValue = document.getElementById('subjectInput').value;
+            const nameInputValue = document.getElementsByName('Name')[0].value;
+            const messageInputValue = document.getElementsByName('Message')[0].value;
 
-      const bodyContent = `Hi Raghul,\n\nI am ${nameInputValue}. I hope this email finds you.\n\n${messageInputValue}`;
+            const bodyContent = `Hi Nishant,\n\nI am ${nameInputValue}. I hope this email finds you well.\n\n${messageInputValue}`;
 
-      const mailtoLink = `mailto:raghulraghul111@gmail.com?subject=${encodeURIComponent('Reg: ' + subjectInputValue)}&body=${encodeURIComponent(bodyContent)}`;
+            const mailtoLink = `mailto:nishantsg300@gmail.com?subject=${encodeURIComponent('Portfolio Contact: ' + subjectInputValue)}&body=${encodeURIComponent(bodyContent)}`;
 
-      window.location.href = mailtoLink;
-      event.preventDefault(); // Prevents the default form submission
-});
+            window.location.href = mailtoLink;
+            event.preventDefault(); // Prevents default form submission
+      });
+}
+
